@@ -1,0 +1,36 @@
+language: cpp
+dist: xenial
+compiler: gcc
+
+install: 
+  # Qt5
+  - sudo apt-get install -qq qt5-qmake qt5-default
+  # cppcheck
+  - sudo apt-get install -qq cppcheck
+  # Codecov
+  - sudo pip install codecov
+  # OCLint
+  - ./scripts/install_oclint
+
+script: 
+  # Build and run the tests
+  - qmake
+  - make --silent debug
+  - ./cicone
+  # Get code coverage
+  - ./scripts/get_code_cov
+  - codecov
+  # cppcheck
+  - cppcheck --quiet --error-exitcode=1 . 
+  # Call OCLint
+  - ./scripts/do_oclint
+  # Build and run and profile normal program
+  - qmake
+  - make --silent release
+  - time ./cicone
+  - gprof cicone > gprof.log
+  - head gprof.log -n 1000
+
+after_success:
+  # Codecov
+  - bash <(curl -s https://codecov.io/bash)

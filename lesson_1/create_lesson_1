@@ -1,10 +1,18 @@
 #!/bin/bash
+#
+# Run from the project's folder
+#
+# Usage:
+#
+#   ./create_lesson_1
+#
+#
 
 #repo_name=cicone_test
 #repo_name=hubtest
 assignees="richelbilderbeek richelbilderbeek"
 
-message_file=$(mktemp)
+
 
 for assignee in $assignees;
 do
@@ -13,6 +21,9 @@ do
   echo "Create new Issue for $assignee"
   echo "======================================================================="
   echo ""
+
+  message_file=$(mktemp)
+
   echo "For @$assignee: something to do" > $message_file
   echo "" >> $message_file
   echo "Dear @$assignee, please do this :+1:" >> $message_file
