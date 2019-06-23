@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#repo_name=cicone_test
+#repo_name=hubtest
+assignees="richelbilderbeek richelbilderbeek"
+
+message_file=$(mktemp)
+
+for assignee in $assignees;
+do
+  echo ""
+  echo "======================================================================="
+  echo "Create new Issue for $assignee"
+  echo "======================================================================="
+  echo ""
+  echo "For @$assignee: something to do" > $message_file
+  echo "" >> $message_file
+  echo "Dear @$assignee, please do this :+1:" >> $message_file
+
+  cat $message_file
+
+  hub issue create -a $assignee -m "$(cat $message_file)"
+
+done
+
+exit 1
+
+
