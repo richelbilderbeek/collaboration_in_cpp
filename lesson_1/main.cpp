@@ -274,7 +274,9 @@ void test_int_to_roman()
     assert(false); //!OCLINT should never get here. This is accepted idiom
   } catch (const std::invalid_argument& e)
   {
-    assert(std::string(e.what()) == "'int_to_roman' only supports values from zero to and including three");
+    assert(std::string(e.what()) ==
+      "'int_to_roman' only supports values from zero to and including three"
+    );
   }
   #endif // FIX_ISSUE_INT_TO_ROMAN
 }
@@ -293,7 +295,9 @@ void test_int_to_word()
     assert(false); //!OCLINT should never get here. This is accepted idiom
   } catch (const std::invalid_argument& e)
   {
-    assert(std::string(e.what()) == "'int_to_word' only supports values from zero to and including three");
+    assert(std::string(e.what()) ==
+      "'int_to_word' only supports values from zero to and including three"
+    );
   }
   #endif // FIX_ISSUE_INT_TO_WORD
 }
@@ -413,7 +417,9 @@ void test_roman_to_int()
     assert(false); //!OCLINT should never get here. This is accepted idiom
   } catch (const std::invalid_argument& e)
   {
-    assert(std::string(e.what()) == "'roman_to_int' only supports values from zero to and including four");
+    assert(std::string(e.what()) ==
+      "'roman_to_int' only supports values from zero to and including four"
+    );
   }
   #endif // FIX_ISSUE_ROMAN_TO_INT
 }
@@ -432,7 +438,9 @@ void test_word_to_int()
     assert(false); //!OCLINT should never get here. This is accepted idiom
   } catch (const std::invalid_argument& e)
   {
-    assert(std::string(e.what()) == "'word_to_int' only supports values from zero to and including three");
+    assert(std::string(e.what()) ==
+      "'word_to_int' only supports values from zero to and including three"
+    );
   }
   #endif // FIX_ISSUE_WORD_TO_INT
 }

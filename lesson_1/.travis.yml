@@ -38,7 +38,7 @@ script:
   - rm -rf .git
   - rm -rf debug
   - rm -rf release
-  - cd ..; sloccount --overhead 1 --personcost 22614 djog_unos_2018 | egrep -v "Adding"; cd djog_unos_2018
+  - cd ..; sloccount --overhead 12 --personcost 22614 cicone | egrep -v "Adding"; cd cocone
 
 after_success:
   # Codecov
