@@ -27,3 +27,11 @@ There will be more merge conflicts though ...
 
 Because this projects requires as little as possible, 
 to allow all beginners to get going easily.
+
+## Summary of Snow White, from [Wikipedia](https://en.wikipedia.org/wiki/Snow_White#Story)
+
+At the beginning of the story, a queen sits sewing at an open window during a winter snowfall when she pricks her finger with her needle, causing three drops of red blood to drip onto the freshly fallen white snow on the black windowsill.
+
+...
+
+He orders that she wear a pair of red-hot iron slippers and dance in them until she drops dead for the attempted murder of Snow White.
