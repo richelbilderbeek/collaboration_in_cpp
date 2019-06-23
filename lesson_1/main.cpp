@@ -144,7 +144,7 @@ void test_bool_to_coin()
   #endif // FIX_ISSUE_BOOL_TO_COIN
 }
 
-void test_calc_proper_divs()
+void test_calc_proper_divs() //!OCLINT tests may be long
 {
   //#define FIX_ISSUE_CALC_PROPER_DIVS
   #ifdef FIX_ISSUE_CALC_PROPER_DIVS
