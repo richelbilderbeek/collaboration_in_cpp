@@ -6,4 +6,4 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 Teaching notes on how to collaborate using git and GitHub with the C++ programming language 
 
- * [Lesson 1: basics](lesson_1.md)
+ * [Lesson 1: basics](lesson_1/README.md)
