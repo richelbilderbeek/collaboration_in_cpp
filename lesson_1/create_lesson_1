@@ -12,21 +12,50 @@
 #repo_name=hubtest
 assignees="richelbilderbeek richelbilderbeek"
 
+exit 1
 
 
+################################################################################
+# Add Travis build badge
+################################################################################
 for assignee in $assignees;
 do
   echo ""
   echo "======================================================================="
-  echo "Create new Issue for $assignee"
+  echo "Create new Issue for $assignee": add Travis build badge
   echo "======================================================================="
   echo ""
 
   message_file=$(mktemp)
 
-  echo "For @$assignee: something to do" > $message_file
+  echo "For @$assignee: add Travis build badge to README.md" > $message_file
   echo "" >> $message_file
-  echo "Dear @$assignee, please do this :+1:" >> $message_file
+  echo " * Difficulty: 1/10" >> $message_file
+  echo "" >> $message_file
+  echo "Add a Travis build badge for your branch to README.md." >> $message_file
+  echo "Do this from your branch on your local computer." >> $message_file
+  echo "Check if the layout remains pretty from the GitHub website." >> $message_file
+  echo 'If the layout remains pretty, merge your work to the `develop` branch' >> $message_file
+  echo "" >> $message_file
+  echo 'For example, if `README.md` looks like this:' >> $message_file
+  echo "" >> $message_file
+  echo '```' >> $message_file
+  echo 'Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)' >> $message_file
+  echo '---|---|---' >> $message_file
+  echo '`piet`|[![Build Status](https://travis-ci.org/richelbilderbeek/cicone.svg?branch=piet)](https://travis-ci.org/richelbilderbeek/cicone)|[![codecov.io](https://codecov.io/github/richelbilderbeek/cicone/coverage.svg?branch=piet)](https://codecov.io/github/richelbilderbeek/cicone/branch/piet)' >> $message_file
+  echo '`truus` |[![Build Status](https://travis-ci.org/richelbilderbeek/cicone.svg?branch=truus)](https://travis-ci.org/richelbilderbeek/cicone)|[![codecov.io](https://codecov.io/github/richelbilderbeek/cicone/coverage.svg?branch=truus)](https://codecov.io/github/richelbilderbeek/cicone/branch/truus)' >> $message_file
+  echo '```' >> $message_file
+  echo "" >> $message_file
+  echo 'Add your name *alphabetically*. If this is `rinus`, this will become:' >> $message_file
+  echo "" >> $message_file
+  echo '```' >> $message_file
+  echo 'Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)' >> $message_file
+  echo '---|---|---' >> $message_file
+  echo '`piet`|[![Build Status](https://travis-ci.org/richelbilderbeek/cicone.svg?branch=piet)](https://travis-ci.org/richelbilderbeek/cicone)|[![codecov.io](https://codecov.io/github/richelbilderbeek/cicone/coverage.svg?branch=piet)](https://codecov.io/github/richelbilderbeek/cicone/branch/piet)' >> $message_file
+  echo '`rinus`|[![Build Status](https://travis-ci.org/richelbilderbeek/cicone.svg?branch=rinus)](https://travis-ci.org/richelbilderbeek/cicone)|[![codecov.io](https://codecov.io/github/richelbilderbeek/cicone/coverage.svg?branch=rinus)](https://codecov.io/github/richelbilderbeek/cicone/branch/rinus)' >> $message_file
+  echo '`truus` |[![Build Status](https://travis-ci.org/richelbilderbeek/cicone.svg?branch=truus)](https://travis-ci.org/richelbilderbeek/cicone)|[![codecov.io](https://codecov.io/github/richelbilderbeek/cicone/coverage.svg?branch=truus)](https://codecov.io/github/richelbilderbeek/cicone/branch/truus)' >> $message_file
+  echo '```' >> $message_file
+  echo "" >> $message_file
 
   cat $message_file
 
@@ -34,6 +63,31 @@ do
 
 done
 
-exit 1
+################################################################################
+# Create your own branch
+################################################################################
+for assignee in $assignees;
+do
+  echo ""
+  echo "======================================================================="
+  echo "Create new Issue for $assignee": create your own branch
+  echo "======================================================================="
+  echo ""
 
+  message_file=$(mktemp)
+
+  echo "For @$assignee: create your own branch" > $message_file
+  echo "" >> $message_file
+  echo " * Difficulty: 1/10" >> $message_file
+  echo "" >> $message_file
+  echo "Create your own topic branch," >> $message_file
+  echo "using the GitHub website interface." >> $message_file
+  echo "" >> $message_file
+  echo 'The recommended naming is `first_name` (e.g. `truus`).' >> $message_file
+
+  cat $message_file
+
+  hub issue create -a $assignee -m "$(cat $message_file)"
+
+done
 

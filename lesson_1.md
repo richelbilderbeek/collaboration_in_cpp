@@ -27,24 +27,11 @@ Share @richelbilderbeek your GitHub username and he'll add you as a Collaborator
 
 ### Add your branch
 
- * Difficulty: 1/10
-
-Create a branch with your name at the GitHub website
+In script
 
 ### Show your branch's build status
 
- * Difficulty: 1/10
-
-Create a branch with your name at the GitHub website.
-
-Do this below the `develop` branch.
-
-```
-Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)|[![Codecov logo](pics/Codecov.png)](https://www.codecov.io)
----|---|---
-`master` |[![Build Status](https://travis-ci.org/richelbilderbeek/cicone.svg?branch=master)](https://travis-ci.org/richelbilderbeek/cicone)|[![codecov.io](https://codecov.io/github/richelbilderbeek/cicone/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/cicone/branch/master)
-`develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/cicone.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/cicone)|[![codecov.io](https://codecov.io/github/richelbilderbeek/cicone/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/cicone/branch/develop)
-```
+In script
 
 ### Create `calc_sum_cpp` 1: use
 
