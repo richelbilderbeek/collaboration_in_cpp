@@ -12,8 +12,272 @@
 #repo_name=hubtest
 assignees="richelbilderbeek richelbilderbeek"
 
+echo ""
+echo "======================================================================="
+echo 'Create `int_to_word`'
+echo "======================================================================="
+echo ""
 
-exit 1
+message_file=$(mktemp)
+
+echo 'Create `int_to_word`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 3/10' >> $message_file
+echo '' >> $message_file
+echo '`int_to_word` is a function to convert an integer value' >> $message_file
+echo 'to its written and spoken equivalent, for example `3` becomes `three`.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+echo 'For now, it only will support values from 0 to and including 3.' >> $message_file
+echo 'Create a new Issue if you want to extend the range' >> $message_file
+echo 'of supported values.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `is_abundant` 1: use
+
+echo 'Create `is_abundant`' > $message_file
+echo '' >> $message_file
+echo 'Depends on:' >> $message_file
+echo '' >> $message_file
+echo ' * [ ] `calc_sum`' >> $message_file
+echo ' * [ ] `calc_proper_divs`' >> $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 5/10' >> $message_file
+echo '' >> $message_file
+echo '`is_abundant` is a function to determine if a number is abundant number.' >> $message_file
+echo 'A number is abundant if the sum of its proper divisor exceeds itself.' >> $message_file
+echo 'For example, 24 is abundant, as its the proper divisors are 1, 2, 3, 4, 6, 8, and 12.' >> $message_file
+echo 'The sum of these is 36. Because 36 is more than 24, the number is abundant.' >> $message_file
+echo '' >> $message_file
+echo ':warning: Use `calc_sum` and `calc_proper_divs` to implement `is_abundant` :warning:' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `is_deficient`
+
+echo 'Create `is_deficient`' > $message_file
+echo '' >> $message_file
+echo 'Depends on:' >> $message_file
+echo '' >> $message_file
+echo ' * [ ] `calc_sum`' >> $message_file
+echo ' * [ ] `calc_proper_divs`' >> $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 5/10' >> $message_file
+echo '' >> $message_file
+echo '`is_deficient` is a function to determine if a number is deficient.' >> $message_file
+echo 'A number is deficient if the sum of its proper divisor is less than itself.' >> $message_file
+echo 'For example, 8 is deficient, as its the proper divisors are 1, 2, 4.' >> $message_file
+echo 'The sum of these is 7. Because 7 is less than 8, the number is deficient.' >> $message_file
+echo '' >> $message_file
+echo ':warning: Use `calc_sum` and `calc_proper_divs` to implement `is_deficient` :warning:' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `is_even`
+
+echo 'Create `is_even`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 3/10' >> $message_file
+echo '' >> $message_file
+echo '`is_even` is a function to determine if a number is even (as opposite' >> $message_file
+echo 'of odd), e.g. 2 is an even number.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `is_odd`
+
+echo 'Create `is_odd`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 3/10' >> $message_file
+echo '' >> $message_file
+echo '`is_odd` is a function to determine if a number is odd (as opposite' >> $message_file
+echo 'of even), e.g. 3 is an odd number.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `is_perfect`
+
+echo 'Create `is_perfect`' > $message_file
+echo '' >> $message_file
+echo 'Depends on:' >> $message_file
+echo '' >> $message_file
+echo ' * [ ] `calc_sum`' >> $message_file
+echo ' * [ ] `calc_proper_divs`' >> $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 5/10' >> $message_file
+echo '' >> $message_file
+echo '`is_perfect` is a function to determine if a number is a perfect number.' >> $message_file
+echo 'A perfect number has the sum of its proper divisor equal to itself.' >> $message_file
+echo 'For example, 6 has proper divisors 1, 2, 3. Because 1 + 2 + 3 == 6, 6 is' >> $message_file
+echo 'a perfect number.' >> $message_file
+echo '' >> $message_file
+echo ':warning: Use `calc_sum` and `calc_proper_divs` to implement `is_perfect` :warning:' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `is_prime`
+
+echo 'Create `is_prime`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 6/10' >> $message_file
+echo '' >> $message_file
+echo '`is_prime` is a function to determine if a number is a prime number.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `roman_to_int`
+
+echo 'Create `roman_to_int`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 4/10' >> $message_file
+echo '' >> $message_file
+echo '`roman_to_int` is a function to convert a' >> $message_file
+echo 'Roman string to an integer value' >> $message_file
+echo 'to a Roman string, for example `IV` becomes `4`.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+echo 'For now, it only will support values from 0 to and including 4.' >> $message_file
+echo 'Create a new Issue if you want to extend the range' >> $message_file
+echo 'of supported values.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+### Create `word_to_int`
+
+echo 'Create `word_to_int`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 4/10' >> $message_file
+echo '' >> $message_file
+echo '`word_to_int` is a function to convert the written/spoken form of' >> $message_file
+echo 'a number to an integer value, for example the string `three` becomes `3`.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+echo 'For now, it only will support values from 0 to and including 3.' >> $message_file
+echo 'Create a new Issue if you want to extend the range' >> $message_file
+echo 'of supported values.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+echo ""
+echo "======================================================================="
+echo 'Create `int_to_roman`'
+echo "======================================================================="
+echo ""
+
+message_file=$(mktemp)
+
+echo 'Create `int_to_roman`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 4/10' >> $message_file
+echo '' >> $message_file
+echo '`int_to_roman` is a function to convert an integer value' >> $message_file
+echo 'to a Roman string, for example `3` becomes `III`.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+echo 'For now, it only will support values from 0 to and including 3.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo 'Create a new Issue if you want to extend the range' >> $message_file
+echo 'of supported values.' >> $message_file
+
+hub issue create -m "$(cat $message_file)"
+
+echo ""
+echo "======================================================================="
+echo 'Create `coin_to_bool`'
+echo "======================================================================="
+echo ""
+
+message_file=$(mktemp)
+
+echo 'Create `coin_to_bool`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 3/10' >> $message_file
+echo '' >> $message_file
+echo '`coin_to_bool` is a function to convert a coin side (represented' >> $message_file
+echo 'as a string) to a boolean: the string `heads` becomes `true`, where' >> $message_file
+echo 'the string `tails` becomes `false`.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+
+
+
+hub issue create -m "$(cat $message_file)"
+
+echo ""
+echo "======================================================================="
+echo 'Create `calc_sum`'
+echo "======================================================================="
+echo ""
+
+message_file=$(mktemp)
+
+echo 'Create `calc_sum`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 4/10' >> $message_file
+echo '' >> $message_file
+echo '`calc_sum` is a function to sum multiple values.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+
+
+
+hub issue create -m "$(cat $message_file)"
+
+echo ""
+echo "======================================================================="
+echo 'Create `calc_proper_divs`'
+echo "======================================================================="
+echo ""
+
+message_file=$(mktemp)
+
+echo 'Create `calc_proper_divs`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 4/10' >> $message_file
+echo '' >> $message_file
+echo '`calc_proper_divs` is a function to calculate all proper divisors of a number' >> $message_file
+echo 'in one vector. A proper divisor `p` of a number `n` is a value less than `n`,' >> $message_file
+echo 'for which `n % p == 0`.' >> $message_file
+echo 'For example, 6 has proper divisors 1, 2, 3.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+
+
+
+hub issue create -m "$(cat $message_file)"
 
 echo ""
 echo "======================================================================="
@@ -25,7 +289,7 @@ message_file=$(mktemp)
 
 echo 'Create `bool_to_coin`' > $message_file
 echo '' >> $message_file
-echo ' * Difficulty: 2/10' >> $message_file
+echo ' * Difficulty: 3/10' >> $message_file
 echo '' >> $message_file
 echo '`bool_to_coin` is a function to convert a boolean to' >> $message_file
 echo 'a coin side: `true` becomes the string `heads`, where' >> $message_file
@@ -35,7 +299,7 @@ echo 'Its current definition, however, is clearly just a stub.' >> $message_file
 echo 'Enable its tests and make the function pass all tests.' >> $message_file
 echo '' >> $message_file
 
-cat $message_file
+
 
 hub issue create -m "$(cat $message_file)"
 
