@@ -13,6 +13,10 @@ install:
   - ./scripts/install_oclint
   # SLOCcount
   - sudo apt-get install sloccount
+  # Check dead links
+  - sudo apt-get install -qq npm
+  - npm config set strict-ssl false
+  - sudo npm install -g markdown-link-check
 
 script: 
   # Build and run the tests
@@ -32,6 +36,10 @@ script:
   - time ./cicone
   - gprof cicone > gprof.log
   - head gprof.log -n 1000
+  # Check dead links
+  - sudo apt-get install -qq npm
+  - npm config set strict-ssl false
+  - sudo npm install -g markdown-link-check
   # SLOCcount
   #   remove OCLint and .git, otherwise it will be counted as well
   - rm -rf oclint-0.10.3 oclint-0.10.3-x86_64-linux-3.13.0-74-generic.tar.gz oclint.log

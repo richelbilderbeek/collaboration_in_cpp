@@ -2,21 +2,15 @@
 #
 # Run from the project's folder
 #
-# Usage:
+# Usage, from cicone:
 #
-#   ./create_lesson_1
+#   ./../collaboration_in_cpp/lesson_1/create_lesson_1
 #
 #
 
-#repo_name=cicone_test
-#repo_name=hubtest
-assignees="richelbilderbeek richelbilderbeek"
+assignees="richelbilderbeek Neves-P AparajithaRamesh christophnetz pratikunterwegs marinapapa TheoPannetier J-Damhuis rscherrer MagdalenaRuG IlPede emimendez"
 
-echo ""
-echo "======================================================================="
-echo 'Create `int_to_word`'
-echo "======================================================================="
-echo ""
+## Create `int_to_word`
 
 message_file=$(mktemp)
 
@@ -36,7 +30,7 @@ echo 'of supported values.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `is_abundant` 1: use
+## Create `is_abundant`'
 
 echo 'Create `is_abundant`' > $message_file
 echo '' >> $message_file
@@ -59,7 +53,7 @@ echo 'Enable its tests and make the function pass all tests.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `is_deficient`
+## Create `is_deficient`
 
 echo 'Create `is_deficient`' > $message_file
 echo '' >> $message_file
@@ -82,7 +76,7 @@ echo 'Enable its tests and make the function pass all tests.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `is_even`
+## Create `is_even`
 
 echo 'Create `is_even`' > $message_file
 echo '' >> $message_file
@@ -96,7 +90,7 @@ echo 'Enable its tests and make the function pass all tests.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `is_odd`
+## Create `is_odd`
 
 echo 'Create `is_odd`' > $message_file
 echo '' >> $message_file
@@ -110,7 +104,7 @@ echo 'Enable its tests and make the function pass all tests.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `is_perfect`
+## Create `is_perfect`
 
 echo 'Create `is_perfect`' > $message_file
 echo '' >> $message_file
@@ -133,7 +127,7 @@ echo 'Enable its tests and make the function pass all tests.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `is_prime`
+## Create `is_prime`
 
 echo 'Create `is_prime`' > $message_file
 echo '' >> $message_file
@@ -146,7 +140,7 @@ echo 'Enable its tests and make the function pass all tests.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `roman_to_int`
+## Create `roman_to_int`
 
 echo 'Create `roman_to_int`' > $message_file
 echo '' >> $message_file
@@ -165,7 +159,7 @@ echo 'of supported values.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-### Create `word_to_int`
+## Create `word_to_int`
 
 echo 'Create `word_to_int`' > $message_file
 echo '' >> $message_file
@@ -183,11 +177,7 @@ echo 'of supported values.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-echo ""
-echo "======================================================================="
-echo 'Create `int_to_roman`'
-echo "======================================================================="
-echo ""
+## Create `int_to_roman`
 
 message_file=$(mktemp)
 
@@ -208,11 +198,7 @@ echo 'of supported values.' >> $message_file
 
 hub issue create -m "$(cat $message_file)"
 
-echo ""
-echo "======================================================================="
-echo 'Create `coin_to_bool`'
-echo "======================================================================="
-echo ""
+## Create `coin_to_bool`
 
 message_file=$(mktemp)
 
@@ -228,15 +214,9 @@ echo 'Its current definition, however, is clearly just a stub.' >> $message_file
 echo 'Enable its tests and make the function pass all tests.' >> $message_file
 echo '' >> $message_file
 
-
-
 hub issue create -m "$(cat $message_file)"
 
-echo ""
-echo "======================================================================="
-echo 'Create `calc_sum`'
-echo "======================================================================="
-echo ""
+## echo 'Create `calc_sum`'
 
 message_file=$(mktemp)
 
@@ -250,15 +230,9 @@ echo 'Its current definition, however, is clearly just a stub.' >> $message_file
 echo 'Enable its tests and make the function pass all tests.' >> $message_file
 echo '' >> $message_file
 
-
-
 hub issue create -m "$(cat $message_file)"
 
-echo ""
-echo "======================================================================="
-echo 'Create `calc_proper_divs`'
-echo "======================================================================="
-echo ""
+## Create `calc_proper_divs`
 
 message_file=$(mktemp)
 
@@ -275,15 +249,9 @@ echo 'Its current definition, however, is clearly just a stub.' >> $message_file
 echo 'Enable its tests and make the function pass all tests.' >> $message_file
 echo '' >> $message_file
 
-
-
 hub issue create -m "$(cat $message_file)"
 
-echo ""
-echo "======================================================================="
-echo "Create bool_to_coin"
-echo "======================================================================="
-echo ""
+## Create `bool_to_coin`
 
 message_file=$(mktemp)
 
@@ -299,8 +267,6 @@ echo 'Its current definition, however, is clearly just a stub.' >> $message_file
 echo 'Enable its tests and make the function pass all tests.' >> $message_file
 echo '' >> $message_file
 
-
-
 hub issue create -m "$(cat $message_file)"
 
 ################################################################################
@@ -309,9 +275,7 @@ hub issue create -m "$(cat $message_file)"
 for assignee in $assignees;
 do
   echo ""
-  echo "======================================================================="
   echo "Create new Issue for $assignee": contribute to Snow White summary
-  echo "======================================================================="
   echo ""
 
   message_file=$(mktemp)
@@ -326,8 +290,6 @@ do
   echo "Check if the layout remains pretty from the GitHub website." >> $message_file
   echo 'If the layout remains pretty, merge your work to the `develop` branch' >> $message_file
  
-  cat $message_file
-
   hub issue create -a $assignee -m "$(cat $message_file)"
 
 done
@@ -338,9 +300,7 @@ done
 for assignee in $assignees;
 do
   echo ""
-  echo "======================================================================="
   echo "Create new Issue for $assignee": add Travis build badge
-  echo "======================================================================="
   echo ""
 
   message_file=$(mktemp)
@@ -374,8 +334,6 @@ do
   echo '```' >> $message_file
   echo "" >> $message_file
 
-  cat $message_file
-
   hub issue create -a $assignee -m "$(cat $message_file)"
 
 done
@@ -386,9 +344,7 @@ done
 for assignee in $assignees;
 do
   echo ""
-  echo "======================================================================="
   echo "Create new Issue for $assignee": create your own branch
-  echo "======================================================================="
   echo ""
 
   message_file=$(mktemp)
@@ -401,8 +357,6 @@ do
   echo "using the GitHub website interface." >> $message_file
   echo "" >> $message_file
   echo 'The recommended naming is `first_name` (e.g. `truus`).' >> $message_file
-
-  cat $message_file
 
   hub issue create -a $assignee -m "$(cat $message_file)"
 
