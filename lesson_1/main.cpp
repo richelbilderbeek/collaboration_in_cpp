@@ -5,7 +5,7 @@
 //------------------------------------------------------------------------------
 // Code
 //------------------------------------------------------------------------------
-std::string bool_to_coin(const bool b)
+std::string bool_to_coin(const bool b) noexcept
 {
   return std::string(b ? 1 : 2, 'x'); //STUB
 }
@@ -14,7 +14,7 @@ std::string bool_to_coin(const bool b)
 /// @param x a value to calculate the proper divisors of.
 /// @return the proper divisors of x with the same sign as x.
 /// Will be empty if x is zero
-std::vector<int> calc_proper_divs(const int x)
+std::vector<int> calc_proper_divs(const int x) noexcept
 {
   std::vector<int> divs(1, x); //STUB
   return divs;
@@ -25,7 +25,7 @@ std::vector<int> calc_proper_divs(const int x)
 /// @param v a vector
 /// @return the sum of all the elements in the vector. Will return
 ///   zero if the vector is empty
-int calc_sum(const std::vector<int>& v)
+int calc_sum(const std::vector<int>& v) noexcept
 {
   return static_cast<int>(v.size()); //STUB
 }
@@ -64,7 +64,7 @@ std::string int_to_word(const int i)
 /// Determine if x is an abundant number
 /// @param x an integer
 /// @return true if x is an abundant number
-bool is_abundant(const int x)
+bool is_abundant(const int x) noexcept
 {
   return x == 314; //STUB
 }
@@ -72,7 +72,7 @@ bool is_abundant(const int x)
 /// Determine if x is a deficient number
 /// @param x an integer
 /// @return true if x is a deficient number
-bool is_deficient(const int x)
+bool is_deficient(const int x) noexcept
 {
   return x == 314; //STUB
 }
@@ -80,7 +80,7 @@ bool is_deficient(const int x)
 /// Determine if x is an even (as opposite of odd) number
 /// @param x an integer
 /// @return true if x is an even number
-bool is_even(const int x)
+bool is_even(const int x) noexcept
 {
   return x == 314; //STUB
 }
@@ -88,7 +88,7 @@ bool is_even(const int x)
 /// Determine if x is an odd (as opposite of even) number
 /// @param x an integer
 /// @return true if x is an odd number
-bool is_odd(const int x)
+bool is_odd(const int x) noexcept
 {
   return x == 314; //STUB
 }
@@ -96,7 +96,7 @@ bool is_odd(const int x)
 /// Determine if x is a perfect number
 /// @param x an integer
 /// @return true if x is a perfect number
-bool is_perfect(const int x)
+bool is_perfect(const int x) noexcept
 {
   return x == 314; //STUB
 }
@@ -104,13 +104,13 @@ bool is_perfect(const int x)
 /// Determine if x is a prime number
 /// @param x an integer
 /// @return true if x is a prime number
-bool is_prime(const int x)
+bool is_prime(const int x) noexcept
 {
   return x == 314; //STUB
 }
 
 /// Returns the Roman value of s as an integer,
-/// for example, 'III' becomes '3'.
+/// for example, 'IV' becomes '4'.
 /// Only supports values from zero to and including four.
 /// An empty string becomes a zero.
 /// Will throw if s is unsupported.
@@ -135,7 +135,7 @@ int word_to_int(const std::string& s)
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
-void test_bool_to_coin()
+void test_bool_to_coin() noexcept
 {
   //#define FIX_ISSUE_BOOL_TO_COIN
   #ifdef FIX_ISSUE_BOOL_TO_COIN
@@ -144,7 +144,7 @@ void test_bool_to_coin()
   #endif // FIX_ISSUE_BOOL_TO_COIN
 }
 
-void test_calc_proper_divs() //!OCLINT tests may be long
+void test_calc_proper_divs() noexcept //!OCLINT tests may be long
 {
   //#define FIX_ISSUE_CALC_PROPER_DIVS
   #ifdef FIX_ISSUE_CALC_PROPER_DIVS
@@ -224,7 +224,7 @@ void test_calc_proper_divs() //!OCLINT tests may be long
   #endif // FIX_ISSUE_CALC_PROPER_DIVS
 }
 
-void test_calc_sum()
+void test_calc_sum() noexcept
 {
   //#define FIX_ISSUE_CALC_SUM
   #ifdef FIX_ISSUE_CALC_SUM
@@ -243,7 +243,7 @@ void test_calc_sum()
   #endif // FIX_ISSUE_CALC_SUM
 }
 
-void test_coin_to_bool()
+void test_coin_to_bool() noexcept
 {
   //#define FIX_ISSUE_COIN_TO_BOOL
   #ifdef FIX_ISSUE_COIN_TO_BOOL
@@ -260,7 +260,7 @@ void test_coin_to_bool()
   #endif // FIX_ISSUE_COIN_TO_BOOL
 }
 
-void test_int_to_roman()
+void test_int_to_roman() noexcept
 {
   //#define FIX_ISSUE_INT_TO_ROMAN
   #ifdef FIX_ISSUE_INT_TO_ROMAN
@@ -281,7 +281,7 @@ void test_int_to_roman()
   #endif // FIX_ISSUE_INT_TO_ROMAN
 }
 
-void test_int_to_word()
+void test_int_to_word() noexcept
 {
   //#define FIX_ISSUE_INT_TO_WORD
   #ifdef FIX_ISSUE_INT_TO_WORD
@@ -302,7 +302,7 @@ void test_int_to_word()
   #endif // FIX_ISSUE_INT_TO_WORD
 }
 
-void test_is_abundant()
+void test_is_abundant() noexcept
 {
   //#define FIX_ISSUE_IS_ABUNDANT
   #ifdef FIX_ISSUE_IS_ABUNDANT
@@ -320,7 +320,7 @@ void test_is_abundant()
   #endif // FIX_ISSUE_IS_ABUNDANT
 }
 
-void test_is_deficient()
+void test_is_deficient() noexcept
 {
   //#define FIX_ISSUE_IS_DEFICIENT
   #ifdef FIX_ISSUE_IS_DEFICIENT
@@ -339,7 +339,7 @@ void test_is_deficient()
   #endif // FIX_ISSUE_IS_DEFICIENT
 }
 
-void test_is_even()
+void test_is_even() noexcept
 {
   //#define FIX_ISSUE_IS_EVEN
   #ifdef FIX_ISSUE_IS_EVEN
@@ -351,7 +351,7 @@ void test_is_even()
   #endif // FIX_ISSUE_IS_EVEN
 }
 
-void test_is_odd()
+void test_is_odd() noexcept
 {
   //#define FIX_ISSUE_IS_ODD
   #ifdef FIX_ISSUE_IS_ODD
@@ -365,7 +365,7 @@ void test_is_odd()
   #endif // FIX_ISSUE_IS_ODD
 }
 
-void test_is_perfect()
+void test_is_perfect() noexcept
 {
   //#define FIX_ISSUE_IS_PERFECT
   #ifdef FIX_ISSUE_PERFECT
@@ -381,7 +381,7 @@ void test_is_perfect()
   #endif // FIX_ISSUE_PERFECT
 }
 
-void test_is_prime()
+void test_is_prime() noexcept
 {
   //#define FIX_ISSUE_IS_PRIME
   #ifdef FIX_ISSUE_IS_PRIME
@@ -402,7 +402,7 @@ void test_is_prime()
   #endif // FIX_ISSUE_IS_PRIME
 }
 
-void test_roman_to_int()
+void test_roman_to_int() noexcept
 {
   //#define FIX_ISSUE_ROMAN_TO_INT
   #ifdef FIX_ISSUE_ROMAN_TO_INT
@@ -424,7 +424,7 @@ void test_roman_to_int()
   #endif // FIX_ISSUE_ROMAN_TO_INT
 }
 
-void test_word_to_int()
+void test_word_to_int() noexcept
 {
   //#define FIX_ISSUE_WORD_TO_INT
   #ifdef FIX_ISSUE_WORD_TO_INT
@@ -445,7 +445,7 @@ void test_word_to_int()
   #endif // FIX_ISSUE_WORD_TO_INT
 }
 
-void test()
+void test() noexcept
 {
   test_bool_to_coin();
   test_calc_proper_divs();

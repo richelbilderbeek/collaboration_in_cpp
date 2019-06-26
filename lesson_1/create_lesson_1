@@ -15,6 +15,30 @@ assignees="richelbilderbeek richelbilderbeek"
 
 exit 1
 
+echo ""
+echo "======================================================================="
+echo "Create bool_to_coin"
+echo "======================================================================="
+echo ""
+
+message_file=$(mktemp)
+
+echo 'Create `bool_to_coin`' > $message_file
+echo '' >> $message_file
+echo ' * Difficulty: 2/10' >> $message_file
+echo '' >> $message_file
+echo '`bool_to_coin` is a function to convert a boolean to' >> $message_file
+echo 'a coin side: `true` becomes the string `heads`, where' >> $message_file
+echo '`false` becomes the string `tails`.' >> $message_file
+echo '' >> $message_file
+echo 'Its current definition, however, is clearly just a stub.' >> $message_file
+echo 'Enable its tests and make the function pass all tests.' >> $message_file
+echo '' >> $message_file
+
+cat $message_file
+
+hub issue create -m "$(cat $message_file)"
+
 ################################################################################
 # Contribute to Snow White summary
 ################################################################################
@@ -32,8 +56,8 @@ do
   echo "" >> $message_file
   echo " * Difficulty: 2/10" >> $message_file
   echo "" >> $message_file
-  echo "Contribute to the 'Snow White' plot summary at the bottom of README.md," >> $message_file
-  echo 'by adding exactly one line from [the Wikipedia page](https://en.wikipedia.org/wiki/Snow_White#Story).' >> $message_file
+  echo 'Contribute to the 'Snow White' plot summary at the bottom of README.md (' >> $message_file
+  echo 'for inspiration, see [the Wikipedia page](https://en.wikipedia.org/wiki/Snow_White#Story)).' >> $message_file
   echo "Do this from your branch on your local computer." >> $message_file
   echo "Check if the layout remains pretty from the GitHub website." >> $message_file
   echo 'If the layout remains pretty, merge your work to the `develop` branch' >> $message_file

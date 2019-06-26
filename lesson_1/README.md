@@ -17,6 +17,16 @@ Branch|[Travis](https://travis-ci.org)|[Codecov](https://www.codecov.io)
 
 ## FAQ
 
+### What are the goals and non-goals of this exercise?
+
+ * GitHub Project page
+ * Branches
+ * Correct C++ programming
+
+Non-goals:
+
+ * In-depth C++ programming
+
 ### Why is there only one C++ file?
 
 Because this is easiest for beginners to get compiled and running.
@@ -28,10 +38,9 @@ There will be more merge conflicts though ...
 Because this projects requires as little as possible, 
 to allow all beginners to get going easily.
 
-## Summary of Snow White, from [Wikipedia](https://en.wikipedia.org/wiki/Snow_White#Story)
+## Summary of Snow White
 
-At the beginning of the story, a queen sits sewing at an open window during a winter snowfall when she pricks her finger with her needle, causing three drops of red blood to drip onto the freshly fallen white snow on the black windowsill.
+Once upon a time ...
 
-...
 
-He orders that she wear a pair of red-hot iron slippers and dance in them until she drops dead for the attempted murder of Snow White.
+and they lived happily ever after.
