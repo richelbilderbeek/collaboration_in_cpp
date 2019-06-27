@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Run from the project's folder
+#
+# Usage, from cicone:
+#
+#   ./../collaboration_in_cpp/lesson_1/create_lesson_1
+#
+#
+
+assignees="Neves-P AparajithaRamesh christophnetz pratikunterwegs marinapapa TheoPannetier J-Damhuis rscherrer MagdalenaRuG IlPede emimendez swom"
+#assignees="richelbilderbeek Neves-P AparajithaRamesh christophnetz pratikunterwegs marinapapa TheoPannetier J-Damhuis rscherrer MagdalenaRuG IlPede emimendez swom"
+#assignees="richelbilderbeek"
+
+################################################################################
+# Contribute to Snow White summary
+################################################################################
+for assignee in $assignees;
+do
+  echo ""
+  echo "Create new Issue for $assignee": contribute to Snow White summary
+  echo ""
+
+  message_file=$(mktemp)
+
+  echo "For @$assignee: contribute to Snow White summary on master" > $message_file
+  echo "" >> $message_file
+  echo " * Difficulty: 2/10" >> $message_file
+  echo "" >> $message_file
+  echo 'Contribute to the 'Snow White' plot summary at the bottom of README.md (' >> $message_file
+  echo 'for inspiration, see [the Wikipedia page](https://en.wikipedia.org/wiki/Snow_White#Story)).' >> $message_file
+  echo 'Do this on the `master` branch on your local computer.' >> $message_file
+  echo 'No need to check the layout: there will be merge conflicts :-).' >> $message_file
+ 
+  hub issue create -a $assignee -m "$(cat $message_file)"
+
+done
