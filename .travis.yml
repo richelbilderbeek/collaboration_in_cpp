@@ -10,4 +10,5 @@ install:
 script:
   # Check dead links
   - rm .travis.yml
+  - rm lesson_1.md
   - ./scripts/check_dead_links
