@@ -24,8 +24,8 @@ script:
   - make --silent debug
   - ./cicone
   # Get code coverage
-  - ./scripts/get_code_cov
-  - codecov
+  - ./scripts/get_code_cov >/dev/null
+  - codecov >/dev/null
   # cppcheck
   - cppcheck --quiet --error-exitcode=1 . 
   # Call OCLint
